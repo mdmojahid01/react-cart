@@ -10,15 +10,11 @@
     position: absolute;
     top: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.80);
+
 }
 
 .custom-caption {
     position: static !important;
-}
-
-.custom-caption>h1 {
-    font-size: 3.8rem;
 }
 
 .img-container {

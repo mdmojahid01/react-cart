@@ -13,8 +13,8 @@ import Img11 from "../Assets/images/products/mix-nuts.jpg";
 import Img12 from "../Assets/images/products/dates.jpg";
 function Product() {
   return (
-    <div className="container py-5">
-      <h1 className=" pb-3">Products</h1>
+    <div className="py-5 bg-light3 px-5">
+      <h1 className=" pb-3 text-c1 text-center">Products</h1>
       <div className="row">
         <ProductItem img={Img1} price="1399" name="Walnuts" />
         <ProductItem img={Img2} price="799" name="Almonds" />

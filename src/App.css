@@ -1,3 +1,7 @@
+* {
+    font-family: 'Taviraj', serif;
+}
+
 .flex-cr {
     display: flex;
     justify-content: center;

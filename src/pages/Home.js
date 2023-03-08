@@ -26,12 +26,15 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        <div className="layer flex-cr">
+        <div className="layer bg-custom-light-50 flex-cr">
           <NavbarComponent />
-          <div className="custom-caption flex-cc text-white">
-            <h2>Are you nuts lover?</h2>
-            <h1>Don't Wait!</h1>
-            <NavLink to="/cart" className="btn btn-primary px-3">
+          <div className="custom-caption flex-cc text-black">
+            <h1 className="display-5">Are you nuts lover?</h1>
+            <h1 className="display-1">Don't Wait!</h1>
+            <NavLink
+              to="/cart"
+              className="btn btn-primary bg-custom-dark border-0  px-3"
+            >
               Order now
             </NavLink>
           </div>

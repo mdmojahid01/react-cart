@@ -1,0 +1,38 @@
+:root {
+    --bg-light: #96DBDB;
+    --bg-light-75: #96DBDBbf;
+    --bg-light3: #E9FFFF55;
+    --bg-dark: #008080;
+    --font-c1: #80753D;
+    --font-c2: #777777;
+}
+
+.bg-custom-light-50 {
+    background-color: var(--bg-light-75) !important;
+
+}
+
+.bg-custom-light {
+    background-color: var(--bg-light) !important;
+
+}
+
+.bg-light3 {
+    background-color: var(--bg-light3) !important;
+}
+
+.bg-custom-dark {
+    background-color: var(--bg-dark) !important;
+}
+
+.text-c1 {
+    color: var(--font-c1);
+}
+
+.text-c2 {
+    color: var(--font-c2);
+}
+
+.text-c3 {
+    color: #008080 !important;
+}
