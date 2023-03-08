@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="bg-light container p-3 text-center">
+    <div className="bg-light container-fluid p-3 text-center">
       Made in ❤ with React JS
     </div>
   );

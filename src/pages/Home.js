@@ -2,6 +2,7 @@ import NavbarComponent from "../component/Navbar";
 import React, { useState } from "react";
 import "../Assets/css/home.css";
 import Carousel from "react-bootstrap/Carousel";
+import { NavLink } from "react-router-dom";
 import Img1 from "../Assets/images/products/akhrot.jpg";
 import Img2 from "../Assets/images/products/almond.jpg";
 import Img3 from "../Assets/images/products/chestnuts.jpg";
@@ -25,9 +26,17 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        <NavbarComponent />
-
-        {/* ------------ Carousel ------------ */}
+        <div className="layer flex-cr">
+          <NavbarComponent />
+          <div className="custom-caption flex-cc text-white">
+            <h2>Are you nuts lover?</h2>
+            <h1>Don't Wait!</h1>
+            <NavLink to="/cart" className="btn btn-primary px-3">
+              Order now
+            </NavLink>
+          </div>
+        </div>
+        {/* ------------ Background Carousel ------------ */}
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -39,141 +48,61 @@ function Home() {
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img1})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img2})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img3})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img4})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img5})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img6})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img7})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img8})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img9})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
           <Carousel.Item>
             <div
               className="img-container"
               style={{ backgroundImage: `url(${Img10})` }}
-            >
-              <div className="layer flex-cr">
-                <Carousel.Caption className="custom-caption">
-                  <h2>Are you nuts lover?</h2>
-                  <h1>Don't Wait!</h1>
-                  <button className="btn btn-primary px-3">Order now</button>
-                </Carousel.Caption>
-              </div>
-            </div>
+            ></div>
           </Carousel.Item>
         </Carousel>
       </div>

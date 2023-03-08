@@ -2,20 +2,14 @@
     min-height: 100vh;
     max-height: fit-content;
     position: relative;
-    /* overflow: hidden; */
-}
-
-.img-container {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .layer {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.80);
 }
 
@@ -27,15 +21,10 @@
     font-size: 3.8rem;
 }
 
-.inner-home-container {
-    /* min-height: 100%; */
-
-}
-
-.home-left {
-    /* min-height: 100%; */
-}
-
-.home-right {
-    /* min-height: 100%; */
+.img-container {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

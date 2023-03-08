@@ -26,7 +26,7 @@ function NavbarComponent() {
             <NavLink className="nav-link" to="/about">
               About
             </NavLink>
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/cart">
               <span className="flex-cr bg-dark text-white px-2 rounded-3">
                 0 <AiOutlineShoppingCart className="ms-2 text-primary" />
               </span>

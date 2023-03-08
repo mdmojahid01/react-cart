@@ -2,7 +2,7 @@ import { BiRupee } from "react-icons/bi";
 
 function ProductItem({ img, price, name }) {
   return (
-    <div className="col-md-3 bg-transparent p-3">
+    <div className="col-md-6 col-lg-3 bg-transparent p-3">
       <div className="p-3 rounded-4" style={{ backgroundColor: "#e7e7ed" }}>
         <div className="image-container" style={{ height: "230px" }}>
           <img
