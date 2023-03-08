@@ -20,12 +20,11 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-light" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink
-              className="nav-link text-white active"
-              aria-current="page"
-              to="/"
-            >
+            <NavLink className="nav-link text-white" aria-current="page" to="/">
               Home
+            </NavLink>
+            <NavLink className="nav-link text-white" to="/products">
+              Products
             </NavLink>
             <NavLink className="nav-link text-white" to="/about">
               About
