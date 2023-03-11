@@ -1,6 +1,35 @@
 import { BiRupee } from "react-icons/bi";
+import { CartContext } from "../CartContext";
+import { useContext, useState } from "react";
 
-function ProductItem({ img, price, name }) {
+function ProductItem({ img, price, name, _id }) {
+  let { cart, setCart } = useContext(CartContext);
+  let [isAdded, setAdded] = useState(false);
+  const addToCart = (e, product_id) => {
+    let _cart = { ...cart }; // _cart = {}
+
+    if (!_cart.items) {
+      _cart.items = {}; // _cart = {items:{}}
+    }
+
+    if (_cart.items[product_id]) {
+      _cart.items[product_id] += 1;
+    } else {
+      _cart.items[product_id] = 1;
+    }
+    if (!_cart.totalItems) {
+      _cart.totalItems = 0;
+    }
+    _cart.totalItems += 1;
+
+    setCart(_cart);
+    setAdded(true);
+    setTimeout(() => {
+      setAdded(false);
+    }, 1000);
+  };
+
+  // =============== JSX =======================
   return (
     <div className="col-md-6 col-lg-3 bg-transparent p-3">
       <div className="p-3 rounded-4 bg-custom-light">
@@ -22,8 +51,16 @@ function ProductItem({ img, price, name }) {
             </h6>
           </div>
           <div className="col-6 flex-cr justify-content-end">
-            <button className="btn btn-primary bg-custom-dark border-0">
-              Add
+            <button
+              onClick={(e) => {
+                addToCart(e, _id);
+              }}
+              className={`btn btn-primary border-0 ${
+                isAdded ? "bg-custom-dark-light" : "bg-custom-dark"
+              }`}
+              disabled={isAdded}
+            >
+              {isAdded ? "Added" : "Add"}
             </button>
           </div>
         </div>

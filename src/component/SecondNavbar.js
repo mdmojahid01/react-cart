@@ -5,8 +5,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useContext } from "react";
+import { CartContext } from "../CartContext";
 
 function NavbarComponent() {
+  const { cart } = useContext(CartContext);
   // =================== Navbar Component JSX ========================
   return (
     <Navbar expand="lg" className="bg-custom-dark">
@@ -31,7 +34,8 @@ function NavbarComponent() {
             </NavLink>
             <NavLink className="nav-link" to="/cart">
               <span className="flex-cr text-dark bg-custom-light p-1 px-3 rounded-3">
-                0 <AiOutlineShoppingCart className="ms-2" />
+                {cart.totalItems ? cart.totalItems : 0}{" "}
+                <AiOutlineShoppingCart className="ms-2" />
               </span>
             </NavLink>
           </Nav>

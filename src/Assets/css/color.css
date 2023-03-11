@@ -3,6 +3,7 @@
     --bg-light-75: #96DBDBbf;
     --bg-light3: #E9FFFF55;
     --bg-dark: #008080;
+    --bg-dark-light: #012f2f;
     --font-c1: #80753D;
     --font-c2: #777777;
 }
@@ -23,6 +24,10 @@
 
 .bg-custom-dark {
     background-color: var(--bg-dark) !important;
+}
+
+.bg-custom-dark-light {
+    background-color: var(--bg-dark-light) !important;
 }
 
 .text-c1 {
