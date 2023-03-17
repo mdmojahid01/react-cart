@@ -10,6 +10,7 @@ import Products from "./pages/Products";
 import { ProductContext } from "./ProductContext";
 import { CartContext } from "./CartContext";
 import { getCart, storeCart } from "./helpers";
+import Uparrow from "./component/Uparrow";
 
 import Img1 from "./Assets/images/products/akhrot.jpg";
 import Img2 from "./Assets/images/products/almond.jpg";
@@ -77,6 +78,7 @@ function App() {
     <ProductContext.Provider value={{ products, setProducts }}>
       <CartContext.Provider value={{ cart, setCart }}>
         <RouterProvider router={router} />
+        <Uparrow />
       </CartContext.Provider>
     </ProductContext.Provider>
   );

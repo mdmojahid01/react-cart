@@ -5,18 +5,32 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../CartContext";
+
 function NavbarComponent() {
   const { cart } = useContext(CartContext);
-
+  const [scroll, setScroll] = useState(false);
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  });
   // =================== Navbar Component JSX ========================
   return (
-    <Navbar bg="transparent" className="custom-navbar" expand="lg">
+    <Navbar
+      expand="lg"
+      className={`custom-navbar ${
+        scroll ? "position-fixed top-0 bg-custom-dark scroll-nav-color" : ""
+      }`}
+      style={{ transition: "background-color 300ms linear" }}
+    >
       <Container>
         <NavLink className="navbar-brand" to="/">
           <Navbar.Brand as="span" style={{ fontSize: "2rem" }}>
-            <img src={logo} alt="logo" width={50} className="me-3" />
+            <img src={logo} alt="logo" width={50} className="me-3 mb-1" />
             Nuts
           </Navbar.Brand>
         </NavLink>
@@ -32,10 +46,19 @@ function NavbarComponent() {
             <NavLink className="nav-link " to="/about">
               About
             </NavLink>
-            <NavLink className="nav-link text-white" to="/cart">
-              <span className="flex-cr bg-custom-dark p-1 px-3 rounded-3">
+            <NavLink
+              className={`nav-link cart-color ${
+                scroll ? "text-dark" : "text-light"
+              }`}
+              to="/cart"
+            >
+              <span
+                className={`flex-cr p-1 px-3 rounded-3 cart-color ${
+                  scroll ? "bg-custom-light" : "bg-custom-dark"
+                }`}
+              >
                 {cart.totalItems ? cart.totalItems : 0}{" "}
-                <AiOutlineShoppingCart className="ms-2 text-white" />
+                <AiOutlineShoppingCart className={`ms-2 cart-color`} />
               </span>
             </NavLink>
           </Nav>

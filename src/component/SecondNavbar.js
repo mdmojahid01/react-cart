@@ -12,11 +12,15 @@ function NavbarComponent() {
   const { cart } = useContext(CartContext);
   // =================== Navbar Component JSX ========================
   return (
-    <Navbar expand="lg" className="bg-custom-dark">
+    <Navbar
+      expand="lg"
+      className="bg-custom-dark position-sticky top-0"
+      style={{ zIndex: "1" }}
+    >
       <Container>
         <NavLink className="navbar-brand" to="/">
           <Navbar.Brand as="span" style={{ fontSize: "2rem", color: "white" }}>
-            <img src={logo} alt="logo" width={50} className="me-3" />
+            <img src={logo} alt="logo" width={50} className="me-3 mb-1" />
             Nuts
           </Navbar.Brand>
         </NavLink>

@@ -58,6 +58,7 @@ function CartItemList({ product }) {
                 decreamentHandle(product._id);
               }}
               className="btn border-0 px-1"
+              title="decrease item"
             >
               <AiFillMinusCircle className="h2 m-0 text-c3" />
             </button>
@@ -69,6 +70,7 @@ function CartItemList({ product }) {
                 increamentHandle(product._id);
               }}
               className="btn border-0 px-1"
+              title="increase item"
             >
               <AiFillPlusCircle className="h2 m-0 text-c3" />
             </button>
@@ -87,6 +89,7 @@ function CartItemList({ product }) {
                 handleDelete(product._id);
               }}
               className="btn text-danger p-1 m-0"
+              title="delete item from cart"
             >
               <TiDelete className="h1 m-0" />
             </button>

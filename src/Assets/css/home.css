@@ -24,3 +24,13 @@
     background-position: center;
     background-size: cover;
 }
+
+/* ============ Up arrow css ============== */
+.uparrow {
+    position: fixed;
+    bottom: 60px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}

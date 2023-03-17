@@ -3,9 +3,8 @@
     width: 100%;
     top: 0px;
     z-index: 2;
-
 }
 
-.custom-navbar>* {
+.scroll-nav-color *:not(.cart-color, svg, path) {
     color: white !important;
 }
